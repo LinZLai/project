@@ -1,0 +1,37 @@
+# DataSource Config
+spring:
+  mvc:
+    static-path-pattern: /**
+    resources:
+      static-locations: file:C:\Users\赖林樟\Desktop\work\system\src\main\resources\static
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/adsystem?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+server:
+  port: 8081
+
+shiro-redis:
+  enabled: true
+  redis-manager:
+    host: 127.0.0.1.6379
+
+filePath: C:\Users\赖林樟\Desktop\work\system\src\main\resources\static\
+
+mysecurity:
+  jwt:
+    secret: f4e2e52034348f86b67cde581c0f9eb5
+    expire: 604800
+    header: Authorization
+
+alipay:
+  app_id: 2021000119693626
+  appPrivateKey: MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCW6R0tOAz92dZZDbZJTMCZl2t3rxn2W4b2IMxn37r/wmNrLBccauqgIhC2B9Ujk1vTGB9iSiwfuSNGkd/ZBH4RQbaQuN4YSwtFcO52Hm9nEBHT5/GjOLsk8LFFd7s4seDng4X2p4MGEGGZcjL/aSgrwcmUmKYivCRrisSuzs2oNUrpZ2aNlSL/i/+aSyv8sRbmrg2oiqyJtsVxbxmw9Q2OSryb/oIb8f52rJbtfjLL94K7iTFv3TeOUYGWZYxcjFVOKMG6/0JcJ+nJaThqdZJOWVGJzqXODFNI2EYST1thpyeckaE/Ybna89MBQr9Ig5TaElWJCrvCsm/9WJBSdAv7AgMBAAECggEAdqjHi0W2WWgOtakles9B5cL8+neRN3fST/eMIeT2eaIUYDGj3nFnGRCQCUFxYu68VehyzOs7dJozVYrf8xkoM1NzRKpH39wp+akJp5DY0bX9/pwzEL9Lz4j+KnwxlyuuhvuQu1gNmxgIVgpIdTHvJzDR2uiIQWmkTXconbb4WFiQWHhIN5hlp+N323MZqBXJaza24irIWdRrxIimCk2CQLTnvAvkClvnIgnMZ7LYUIgmUn2PLMg9AXzVd4hLTWa+6O3pwjar6OEKhZfQHeWJbr1V39ebUTKwiCIIi8dG3HfSQbXzeLw/9KEj3sC46w8z9rCN+8cfIBpzBtlQYznCgQKBgQDZ3Yxz7Ruh22xifnwzPfB8KzxyOVWOTlFfXIkLHsszbbq065J6iZRABbxjaS3X6WxNvHBR2GjeREG/5INNIkXNaLviV/9SvUFi5mFSEBy4eT13Mg+BxWjTguPHjxtFzATiC2yckMSUcGU5l5IiZJHtU5bINpON8bymwrh00q/uwQKBgQCxU1mUpmc58y3ly0yWyt3oT4ffa6Rn8oiEyxa4LgDVnskrHs4lFGknFwUamHFINrjlucpydJkHGNcuvjhgQXGlQ1G0bcXgMVRAJBp+/NQRU8p9pq8VcayyLaRUPJxXlEJkmUQcgnXvqhIpRz/kqZm81owkNH0izSRUWmSyAN7luwKBgQDEmYyZQCpjUSLpbsKdaxOMuWd+nAZ8uGft6g8xHcS40BhgEwTH10cUzxhFjTB1WosFSzsAYI2hpW6/v3JNNNRQnGaPxmD9RROwL7061JdWUPIKkf40WPRTihYKizVNMuJlKXIFhw4d9Z8i7YhNyPt2cqvqWHWm7bITujvCEC37AQKBgE1ONAB9JwV5ganrnmEi4ek0OtzpFYyHjIKv8yCqVYzLo5Hb5Sz/H/R9sajtin1b9fGYtKx/LnOMncrv/K3h+gR9O7J4JMrfVoZ79t0jpeRD7kQnFa84lnw7L6fVoKcBqIwo0SvIqFeqgi5itHUghzhvJDtocqFoY40utzVu8b2fAoGBAJBe2WvOy1Z0MMluRj/5u9KfULfsSqDZ3yRYl6vB7fjb8M4gjayqUwVnhnsSvER0LHK1Wl97MdiIUNj8NHiQMGzdOe0a0sgRYoCQ7iH23hd5AlM/huR5jknNGKr7O92EnCO6WK7tYIeFnX8xduA1fX4npujm4Ol1nJ5YmtpYLrPO
+  alipayPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAx4t7FMLzzxGWA0ZAeN4Tk7/jrt+lw6hK48Hk0PM2Ve6EBovvVC/UgXea7VDkkaS8XENYRZV/4ZGPkAGaJVFJL58wo7CkoCOm1Q+YAnVp16vzTYacWrGpS8Kgu4UyDFbEwW9jGwVjZmyPSiZSneQy2hYN8BdF8dSPUuxOfrwB8k51acOSk8e+tGVKiqV3YsJXB2zLPnO/zB1asbQ8VPICrNbL6OW+UYiEc7rqBLX155Fe3lnvER7vvoq8HGMhmpNTS/fQXqUgO1ECFrQjTNWUaXOQjaje1l8hJh77QpQ24FvCH7HcK8yM0DaCNLbyGc20LC4FAQQE8hW2GsjwLYfH+QIDAQAB
+  notifyUrl: http://6ftweg.natappfree.cc/alipay/notify
